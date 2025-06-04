@@ -1,8 +1,8 @@
-import LandingPageView from '@widgets/LandingPage'
 import React from 'react'
+import LandingPage from '../pages/LandingPage'
 
 export default function Home() {
   return (
-    <LandingPageView/>
+   <LandingPage/>
   )
 }
