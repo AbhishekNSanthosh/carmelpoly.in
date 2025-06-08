@@ -5,7 +5,7 @@ import { MdEmail } from "react-icons/md";
 
 export default function TopBar() {
   return (
-    <div className="bg-primary text-white h-[6vh] px-[5vw] flex items-center justify-between text-sm">
+    <div className="bg-primary text-white h-[5vh] px-[5vw] flex items-center justify-between text-sm">
       <div className="flex items-center gap-5">
         <div className="flex flex-row items-center gap-2">
           <MdCall className="text-lg" />
