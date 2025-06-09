@@ -1,3 +1,4 @@
+import CampusGallery from '@widgets/CampusGallery'
 import Carousel from '@widgets/Carousel'
 import CounterFrame from '@widgets/CounterFrame'
 import OurCourses from '@widgets/OurCourses'
@@ -11,6 +12,7 @@ export default function LandingPage() {
       <Welcome/>
       <OurCourses/>
       <CounterFrame/>
+      <CampusGallery/>
     </main>
   )
 }
