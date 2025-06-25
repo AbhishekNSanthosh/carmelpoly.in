@@ -16,8 +16,8 @@ export const navItems = [
                 to: "/about/history",
             },
             {
-                title: "Mission & Vision",
-                to: "/",
+                title: "Vision & Mission",
+                to: "/about/vision-mission",
             },
             {
                 title: "Management",

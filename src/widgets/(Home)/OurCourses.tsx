@@ -34,7 +34,7 @@ export default function OurCourses() {
     ],
   };
   return (
-    <div className="px-[5vw] py-[5rem] flex flex-col gap-5">
+    <div className="px-[5vw] py-[2rem] flex flex-col gap-5">
       <Titlebar title="Our Courses" />
       <div className="">
         {Object.entries(departments).map(([category, items]) => (

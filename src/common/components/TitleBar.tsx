@@ -11,14 +11,16 @@ interface TitlebarProps {
 // The Titlebar component accepts props for flexibility and reusability
 const Titlebar: React.FC<TitlebarProps> = ({
   title = "Titlebar",
-  className = "text-white",
+  className = "text-primary",
 }) => {
   return (
     <div
       className={` ${className} uppercase flex items-center justify-between`}
     >
-      <div className="items-center justify-center flex gap-3 font-unbounded text-primary text-xl font-semibold">
-        <FaRegDotCircle className="text-primary"/>
+      <div
+        className={`${className} items-center justify-center flex gap-3 font-unbounded text-primary text-xl font-semibold`}
+      >
+        <FaRegDotCircle className={`${className}`} />
         {title}
       </div>
     </div>

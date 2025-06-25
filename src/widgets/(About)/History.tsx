@@ -3,7 +3,7 @@ import React from "react";
 
 export default function History() {
   return (
-    <div className="px-[5vw] py-[3rem] space-y-6">
+    <div className="px-[5vw] py-[2rem] space-y-6">
       <Titlebar title="Our History" />
       <p className="text-gray-700 text-lg text-justify leading-relaxed">
         Carmel Polytechnic College was established in the year 1962 by the
