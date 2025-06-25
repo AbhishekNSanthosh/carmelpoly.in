@@ -9,11 +9,11 @@ export const navItems = [
         dropDown: [
             {
                 title: "Our profile",
-                to: "/about-us",
+                to: "/about/about-us",
             },
             {
                 title: "History",
-                to: "/",
+                to: "/about/history",
             },
             {
                 title: "Mission & Vision",
