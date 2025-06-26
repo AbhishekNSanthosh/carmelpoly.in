@@ -27,21 +27,21 @@ export const navItems = [
     },
     {
         title: "Admissions",
-        to: "/",
-        dropDown: [
-            {
-                title: "History",
-                to: "/",
-            },
-            {
-                title: "Mission & Vision",
-                to: "/",
-            },
-            {
-                title: "Management",
-                to: "/",
-            },
-        ]
+        to: "/admissions",
+        // dropDown: [
+        //     {
+        //         title: "History",
+        //         to: "/",
+        //     },
+        //     {
+        //         title: "Mission & Vision",
+        //         to: "/",
+        //     },
+        //     {
+        //         title: "Management",
+        //         to: "/",
+        //     },
+        // ]
     },
     {
         title: "Departments",
