@@ -125,6 +125,6 @@ export const navItems = [
     },
     {
         title: "Contact",
-        to: "/",
+        to: "/contact",
     },
 ]
