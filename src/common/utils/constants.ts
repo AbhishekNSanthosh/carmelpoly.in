@@ -49,27 +49,27 @@ export const navItems = [
         dropDown: [
             {
                 title: "Computer Engineering",
-                to: "/",
+                to: "/departments/cse",
             },
             {
                 title: "Mechanical Engineering",
-                to: "/",
+                to: "/departments/me",
             },
             {
                 title: "Civil Engineering",
-                to: "/",
+                to: "/departments/ce",
             },
             {
                 title: "Electrical & Electronics Engineering",
-                to: "/",
+                to: "/departments/eee",
             },
             {
                 title: "Automobile Engineering",
-                to: "/",
+                to: "/departments/ae",
             },
             {
                 title: "Electronics Engineering",
-                to: "/",
+                to: "/departments/ee",
             },
         ]
     },
@@ -124,7 +124,7 @@ export const navItems = [
         ]
     },
     {
-        title: "Contact Us",
+        title: "Contact",
         to: "/",
     },
 ]
