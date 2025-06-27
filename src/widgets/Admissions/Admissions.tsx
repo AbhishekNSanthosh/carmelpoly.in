@@ -1,13 +1,14 @@
 import Titlebar from "@components/TitleBar";
 import Link from "next/link";
 import React from "react";
+import Recruiters from "./Recruiters";
 
 export default function Admissions() {
   return (
-    <section className="px-[5vw] py-[4rem] bg-gray-50">
+    <section className="px-[5vw] py-[4rem] bg-gray-50 space-y-5">
       <Titlebar title="Admissions" />
 
-      <div className="flex flex-col lg:flex-row items-center justify-between gap-10 mt-8">
+      <div className="flex flex-col lg:flex-row items-center justify-between gap-10">
         {/* Left Text Content */}
         <div className="flex-[1.4] flex flex-col gap-6">
           <h2 className="font-bold text-2xl text-gray-800">
@@ -47,6 +48,7 @@ export default function Admissions() {
           </Link>
         </div>
       </div>
+      <Recruiters/>
     </section>
   );
 }

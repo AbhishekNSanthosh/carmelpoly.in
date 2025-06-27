@@ -17,7 +17,7 @@ export default function ContactDetails() {
       </div>
       <div className="flex flex-col gap-6">
         <div className="flex gap-3 items-center justify-start">
-          <div className="p-4 bg-black-300 rounded-full">
+          <div className="p-4 border border-gray-300 rounded-full">
             <IoLocationOutline className="text-2xl" />
           </div>
           <div className=" flex flex-col">
@@ -26,7 +26,7 @@ export default function ContactDetails() {
           </div>
         </div>
         <div className="flex gap-3 items-center justify-start">
-          <div className="p-4 bg-black-300 rounded-full">
+         <div className="p-4 border border-gray-300 rounded-full">
             <FiPhone className="text-2xl" />
           </div>
           <div className=" flex flex-col">
@@ -35,7 +35,7 @@ export default function ContactDetails() {
           </div>
         </div>
         <div className="flex gap-3 items-center justify-start">
-          <div className="p-4 bg-black-300 rounded-full">
+           <div className="p-4 border border-gray-300 rounded-full">
             <TbMail className="text-2xl" />
           </div>
           <div className=" flex flex-col">
