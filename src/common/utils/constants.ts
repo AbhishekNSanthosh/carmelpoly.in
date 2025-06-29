@@ -25,7 +25,7 @@ export const navItems = [
             },
             {
                 title: "Management",
-                to: "/",
+                to: "/about/management",
             },
         ]
     },

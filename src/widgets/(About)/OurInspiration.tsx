@@ -4,7 +4,7 @@ import React from "react";
 
 export default function OurInspiration() {
   return (
-    <section className="px-[5vw] py-12 bg-white">
+    <section className="px-[5vw] py-[2rem] bg-white">
       <Titlebar title="Our Inspiration" />
       <div className="mt-8 flex flex-col  items-center gap-10">
         <div className="flex-shrink-0">

@@ -5,7 +5,7 @@ import Recruiters from "./Recruiters";
 
 export default function Admissions() {
   return (
-    <section className="px-[5vw] py-[4rem] bg-gray-50 space-y-5">
+    <section className="px-[5vw] py-[2rem] bg-gray-50 space-y-5">
       <Titlebar title="Admissions" />
 
       <div className="flex flex-col lg:flex-row items-center justify-between gap-10">

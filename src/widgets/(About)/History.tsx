@@ -3,7 +3,7 @@ import React from "react";
 
 export default function History() {
   return (
-    <section className="px-[5vw] py-12 space-y-6">
+    <section className="px-[5vw] py-[2rem] space-y-6">
       <Titlebar title="Our History" />
 
       <div className="space-y-4 text-justify leading-relaxed text-gray-700">
