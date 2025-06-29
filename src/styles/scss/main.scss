@@ -8,7 +8,13 @@ body {
   padding: 0;
   margin: 0;
   font-family: $font-family;
+  scroll-behavior: smooth;
 }
+
+.text-stroke-white {
+  -webkit-text-stroke: 1px white; /* Stroke width & color */
+}
+
 
 @keyframes marquee {
   0% {

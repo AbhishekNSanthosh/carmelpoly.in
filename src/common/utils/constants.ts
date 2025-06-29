@@ -8,8 +8,12 @@ export const navItems = [
         to: "/",
         dropDown: [
             {
-                title: "Our profile",
+                title: "Our Profile",
                 to: "/about/about-us",
+            },
+            {
+                title: "Our Inspiration",
+                to: "/about/our-inspiration",
             },
             {
                 title: "History",
