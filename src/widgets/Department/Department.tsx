@@ -1,67 +1,112 @@
 "use client";
+
 import Titlebar from "@components/TitleBar";
+import { departments } from "@utils/constants";
 import { useParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
-interface Department {
-  id: string;
-  title: string;
-  to: string;
-}
-
-const DEPARTMENTS: Department[] = [
-  {
-    id: "cse",
-    title: "Computer Engineering",
-    to: "/departments/cse",
-  },
-  {
-    id: "me",
-    title: "Mechanical Engineering",
-    to: "/departments/me",
-  },
-  {
-    id: "ce",
-    title: "Civil Engineering",
-    to: "/departments/ce",
-  },
-  {
-    id: "eee",
-    title: "Electrical & Electronics Engineering",
-    to: "/departments/eee",
-  },
-  {
-    id: "ae",
-    title: "Automobile Engineering",
-    to: "/departments/ae",
-  },
-  {
-    id: "ee",
-    title: "Electronics Engineering",
-    to: "/departments/ee",
-  },
-];
+type DepartmentType = keyof typeof departments;
 
 export default function Department() {
-  const [department, setDepartment] = useState("");
   const params = useParams();
-  
-  // Safely extract depId with type checking
-  const depId = params?.depId as string | undefined;
+  const depId = params?.depId as DepartmentType | undefined;
+
+  const [department, setDepartment] = useState<null | typeof departments.ce>(
+    null
+  );
 
   useEffect(() => {
-    if (!depId) {
-      setDepartment("Unknown Department");
-      return;
+    if (depId && departments[depId]) {
+      setDepartment(departments[depId]);
+    } else {
+      setDepartment(null);
     }
-
-    const foundDepartment = DEPARTMENTS.find(dept => dept.id === depId);
-    setDepartment(foundDepartment?.title || "Unknown Department");
   }, [depId]);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [depId]);
+
+  if (!department) {
+    return (
+      <div className="px-[5vw] py-[2rem]">
+        <Titlebar title="Department Not Found" />
+        <p>Sorry, this department does not exist.</p>
+      </div>
+    );
+  }
+
   return (
-    <div className="px-[5vw] py-[2rem]">
-      <Titlebar title={`Department of ${department}`} />
+    <div className="px-[5vw] py-[2rem] space-y-6">
+      <Titlebar title={`Department of ${department.name}`} />
+
+      <p>{department.overview}</p>
+
+      {department.vision && (
+        <div>
+          <h2 className="text-xl font-semibold mt-6 mb-2">Vision</h2>
+          <p>{department.vision}</p>
+        </div>
+      )}
+
+      {department.mission?.length > 0 && (
+        <div>
+          <h2 className="text-xl font-semibold mt-6 mb-2">Mission</h2>
+          <ul className="list-disc list-inside space-y-1">
+            {department.mission.map((m, idx) => (
+              <li key={idx}>{m}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {department.peo?.length > 0 && (
+        <div>
+          <h2 className="text-xl font-semibold mt-6 mb-2">
+            Programme Educational Objectives (PEO)
+          </h2>
+          <ul className="list-disc list-inside space-y-1">
+            {department.peo.map((p, idx) => (
+              <li key={idx}>{p}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {department.pso?.length > 0 && (
+        <div>
+          <h2 className="text-xl font-semibold mt-6 mb-2">
+            Programme Specific Outcomes (PSO)
+          </h2>
+          <ul className="list-disc list-inside space-y-1">
+            {department.pso.map((p, idx) => (
+              <li key={idx}>{p}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {department.labs?.length > 0 && (
+        <div>
+          <h2 className="text-xl font-semibold mt-6 mb-2">Labs</h2>
+          <ul className="list-disc list-inside space-y-1">
+            {department.labs.map((l, idx) => (
+              <li key={idx}>{l}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {department.faculty?.length > 0 && (
+        <div>
+          <h2 className="text-xl font-semibold mt-6 mb-2">Faculty</h2>
+          <ul className="list-disc list-inside space-y-1">
+            {department.faculty.map((f, idx) => (
+              <li key={idx}>{f}</li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
 }

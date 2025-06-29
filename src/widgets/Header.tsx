@@ -8,8 +8,8 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 export default function Header() {
   const [activeDropdown, setActiveDropdown] = useState<number | null>(null);
   const dropdownRefs = useRef<Array<HTMLDivElement | null>>([]);
-  const [dropdownPositions, setDropdownPositions] = useState<{ 
-    [key: number]: { adjustLeft: boolean, width: string } 
+  const [dropdownPositions, setDropdownPositions] = useState<{
+    [key: number]: { adjustLeft: boolean; width: string };
   }>({});
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -27,19 +27,21 @@ export default function Header() {
         if (dropdownElement) {
           const rect = dropdownElement.getBoundingClientRect();
           const isOverflowing = rect.right > window.innerWidth;
-          
+
           // Calculate appropriate width based on content
           const longestItem = Math.max(
-            ...navItems[activeDropdown].dropDown?.map(item => item.title.length) || [0]
+            ...(navItems[activeDropdown].dropDown?.map(
+              (item) => item.title.length
+            ) || [0])
           );
-          const width = longestItem > 30 ? '25vw' : '20vw';
+          const width = longestItem > 30 ? "25vw" : "20vw";
 
-          setDropdownPositions(prev => ({
+          setDropdownPositions((prev) => ({
             ...prev,
             [activeDropdown]: {
               adjustLeft: isOverflowing,
-              width
-            }
+              width,
+            },
           }));
         }
       }, 10); // Minimal delay to ensure dropdown is mounted
@@ -57,7 +59,10 @@ export default function Header() {
     const handleClickOutside = (event: MouseEvent) => {
       if (activeDropdown !== null) {
         const dropdownElement = dropdownRefs.current[activeDropdown];
-        if (dropdownElement && !dropdownElement.contains(event.target as Node)) {
+        if (
+          dropdownElement &&
+          !dropdownElement.contains(event.target as Node)
+        ) {
           setActiveDropdown(null);
         }
       }
@@ -69,7 +74,7 @@ export default function Header() {
 
   return (
     <div className="px-[5vw] flex flex-row items-center justify-between py-4 border-b border-b-gray-300">
-      <div className="flex flex-row items-center gap-2">
+      <Link href={"/"} className="flex flex-row items-center gap-2">
         <Image
           src={"/mainlogo.png"}
           width={1000}
@@ -89,7 +94,7 @@ export default function Header() {
             Punnapra · Alappuzha
           </span>
         </div>
-      </div>
+      </Link>
 
       <div className="flex-2 flex items-center justify-end gap-[2vw]">
         {navItems.map((item, index) => (
@@ -127,7 +132,7 @@ export default function Header() {
                   index > 4 ? "right-0" : "left-0"
                 } z-50`}
                 style={{
-                  width: dropdownPositions[index]?.width || 'auto'
+                  width: dropdownPositions[index]?.width || "auto",
                 }}
                 onMouseLeave={() => setActiveDropdown(null)}
               >

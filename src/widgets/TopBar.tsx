@@ -13,17 +13,23 @@ export default function TopBar() {
             0477 2288 825
           </Link>
         </div>
-        <div className="flex flex-row items-center gap-2">
+        {/* <div className="flex flex-row items-center gap-2">
           <MdEmail className="text-lg" />
           <Link href="mailto:info@carmelpoly.in" className="hover:underline">
             info@carmelpoly.in
           </Link>
-        </div>
+        </div> */}
       </div>
       <div className="flex items-center gap-5">
-        <div className="flex flex-row items-center gap-2">
+        {/* <div className="flex flex-row items-center gap-2">
           <Link href="/" className="hover:underline">
            STAFF SIGN IN
+          </Link>
+        </div> */}
+        <div className="flex flex-row items-center gap-2">
+          <MdEmail className="text-lg" />
+          <Link href="mailto:info@carmelpoly.in" className="hover:underline">
+            info@carmelpoly.in
           </Link>
         </div>
       </div>
