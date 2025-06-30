@@ -37,7 +37,7 @@ export default function Department() {
   }
 
   return (
-    <div className="px-[5vw] py-[2rem] space-y-6">
+    <div className="px-[5vw] py-[2rem] space-y-6 text-justify">
       <Titlebar title={`Department of ${department.name}`} />
 
       <p>{department.overview}</p>

@@ -52,7 +52,7 @@ export default function Welcome() {
 
   return (
     <div className="px-[5vw] py-[5rem] flex flex-col gap-5">
-      <div className="flex flex-row gap-10">
+      <div className="flex md:flex-row gap-10 flex-col">
         <div className="flex-[2] flex flex-col gap-5">
           <Titlebar
             className=""
@@ -71,11 +71,11 @@ export default function Welcome() {
             order reputed for their contributions in the field of education and
             healthcare.
           </p>
-          <div className="">
+          {/* <div className="">
             <button className="bg-primary border-none outline-none rounded-md px-2 py-2 text-white">
               Read more
             </button>
-          </div>
+          </div> */}
         </div>
         <div className="flex-1 flex flex-col gap-5">
           <Titlebar className="" title="Events" />
@@ -111,7 +111,7 @@ export default function Welcome() {
                   </div>
                   <div className="flex-1">
                     <h3 className="text-lg font-semibold">{item.title}</h3>
-                    <p className="text-sm text-gray-600 flex items-center gap-2 mt-1">
+                    <p className="text-sm text-gray-600 flex items-center gap-1 md:gap-2 mt-1">
                       <FaCalendarAlt className="text-gray-500" /> {item.date}
                       {item?.location && (
                         <>
@@ -121,7 +121,17 @@ export default function Welcome() {
                         </>
                       )}
                     </p>
-                    <p className="text-sm mt-2 text-justify">
+                    <p className="text-sm mt-2 text-justify md:hidden ">
+                      {item.description?.slice(0, 40)}
+                      {"..."}
+                      <button
+                        onClick={() => handleReadMore(item)}
+                        className="text-primary ml-3 hover:underline cursor-pointer"
+                      >
+                        Read More →
+                      </button>
+                    </p>
+                    <p className="text-sm mt-2 text-justify hidden md:block">
                       {item.description?.slice(0, 74)}
                       {"..."}
                       <button
@@ -160,7 +170,9 @@ export default function Welcome() {
                 />
               </div>
               <div className="w-full md:w-2/3">
-                <h2 className="text-2xl font-bold mb-2">{selectedEvent.title}</h2>
+                <h2 className="text-2xl font-bold mb-2">
+                  {selectedEvent.title}
+                </h2>
                 <div className="flex items-center gap-4 text-gray-600 mb-4">
                   <div className="flex items-center gap-1">
                     <FaCalendarAlt />
@@ -173,7 +185,9 @@ export default function Welcome() {
                     </div>
                   )}
                 </div>
-                <p className="text-gray-700 mb-4">{selectedEvent.description}</p>
+                <p className="text-gray-700 mb-4">
+                  {selectedEvent.description}
+                </p>
                 {selectedEvent.link && (
                   <a
                     href={selectedEvent.link}

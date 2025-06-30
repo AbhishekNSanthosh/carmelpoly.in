@@ -6,7 +6,7 @@ export default function Management() {
     <div className="px-[5vw] py-[2rem] space-y-6">
       <Titlebar title="Management" />
 
-      <section className="space-y-4">
+      <section className="space-y-4 text-justify">
         <p>
           Carmel Polytechnic College was established in 1958 as an aided institution recognized by AICTE.
           It is managed by the Priests of the Carmelites of Mary Immaculate religious congregation,

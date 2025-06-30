@@ -32,7 +32,7 @@ export default function MissionVision() {
           {/* Vision */}
           <div className=" space-y-2">
             <h4 className="text-sm font-semibold tracking-wider text-primary">OUR VISION</h4>
-            <ul className="list-disc pl-5 text-lg">
+            <ul className="list-disc pl-5">
               <li>
                 To be a Centre of Excellence in Technical education and training
                 equipped with an elevated learning environment catering to the
@@ -46,7 +46,7 @@ export default function MissionVision() {
             <h4 className="text-sm font-semibold tracking-wider text-primary">
               OUR MISSION
             </h4>
-            <ul className="list-disc pl-5 text-lg space-y-1">
+            <ul className="list-disc pl-5 space-y-1">
               <li>
                 To mould technically qualified technicians by providing elegant
                 faculty and well-equipped infrastructure.

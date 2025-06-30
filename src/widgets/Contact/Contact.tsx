@@ -10,7 +10,7 @@ export default function Contact() {
         <div className="">
             <div className="flex">
               <ContactDetails/>
-                <ContactForm/>
+                {/* <ContactForm/> */}
             </div>
         </div>
     </div>

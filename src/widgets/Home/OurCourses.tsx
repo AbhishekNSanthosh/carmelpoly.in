@@ -56,7 +56,7 @@ export default function OurCourses() {
                   key={index}
                   className="bg-white border-r-[5px] border-r-primary/70 rounded-xl overflow-hidden shadow hover:shadow-lg transition duration-300"
                 >
-                  <div className="w-full h-[180px] relative">
+                  <div className="w-[300px] h-[180px] relative">
                     <Image
                       src={dept.image}
                       alt={dept.name}

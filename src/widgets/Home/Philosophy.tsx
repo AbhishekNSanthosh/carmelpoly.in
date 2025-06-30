@@ -18,7 +18,7 @@ export default function Philosophy() {
         {/* Section Header */}
         <Titlebar title="Our Philosophy" />
 
-      <p className="">
+      <p className="text-justify">
         Carmel Polytechnic College aims at providing superior quality trained
         man-power having social commitment along with career advancement to meet
         the challenges and opportunities thrown up by the fast-evolving society
@@ -39,12 +39,12 @@ export default function Philosophy() {
       </span>
 
       {/* Vision & Mission */}
-      <div className="space-y-10">
+      <div className="space-y-10 text-justify">
         <div className="flex flex-col gap-6">
           {/* Vision */}
           <div className=" space-y-2">
             <h4 className="text-sm font-semibold tracking-wider text-primary">OUR VISION</h4>
-            <ul className="list-disc pl-5 text-lg">
+            <ul className="list-disc pl-5">
               <li>
                 To be a Centre of Excellence in Technical education and training
                 equipped with an elevated learning environment catering to the
@@ -58,7 +58,7 @@ export default function Philosophy() {
             <h4 className="text-sm font-semibold tracking-wider text-primary">
               OUR MISSION
             </h4>
-            <ul className="list-disc pl-5 text-lg space-y-1">
+            <ul className="list-disc pl-5 space-y-1">
               <li>
                 To mould technically qualified technicians by providing elegant
                 faculty and well-equipped infrastructure.
