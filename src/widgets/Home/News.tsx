@@ -61,7 +61,7 @@ export default function NewsTicker() {
   return (
     <div className="w-full bg-primary-100 h-[5vh] px-[5vw] flex items-center space-x-3 overflow-hidden">
       <div className="font-medium whitespace-nowrap">
-        <span>Latest News:</span>
+        <span className="text-xs md:text-md">Latest News:</span>
       </div>
       
       <div className="marquee-container overflow-hidden flex-1">

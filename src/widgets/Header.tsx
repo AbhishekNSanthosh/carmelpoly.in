@@ -102,10 +102,10 @@ export default function Header() {
                 priority
               />
               <div className="flex flex-col items-start">
-                <span className="uppercase  text-lg md:text-xl font-semibold text-text-primary">
+                <span className="uppercase text-lg md:text-xl font-semibold text-text-primary">
                   CARMEL
                 </span>
-                <span className="uppercase mt-[-5px] text-xs md:text-sm text-text-primary">
+                <span className="uppercase mt-[-5px] md:mt-0 text-xs md:text-sm text-text-primary">
                   Polytechnic College
                 </span>
                 <span className="text-[10px] uppercase md:text-xs text-text-secondar">
