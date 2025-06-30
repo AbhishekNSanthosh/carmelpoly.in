@@ -56,12 +56,12 @@ export default function OurCourses() {
                   key={index}
                   className="bg-white border-r-[5px] border-r-primary/70 rounded-xl overflow-hidden shadow hover:shadow-lg transition duration-300"
                 >
-                  <div className="w-[300px] h-[180px] relative">
+                  <div className="w-[300px] md:w-auto h-[180px] relative">
                     <Image
                       src={dept.image}
                       alt={dept.name}
                       fill
-                      className="object-cover"
+                      className="w-full object-cover h-full"
                     />
                   </div>
                   <div className="text-center py-3 font-semibold text-blue-800">
