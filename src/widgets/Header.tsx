@@ -155,9 +155,10 @@ export default function Header() {
                       }}
                       onMouseLeave={() => setActiveDropdown(null)}
                     >
-                      <div className="bg-primary bg-opacity-95 shadow-lg min-w-[200px] rounded-lg p-2 transition-all duration-200">
+                      <div className="bg-primary bg-opacity-95 shadow-lg min-w-[250px] w-auto rounded-lg p-2 transition-all duration-200">
                         {item.dropDown.map((subItem, subIndex) => (
                           <Link
+                            target={subItem?.ext ? "_blank" : "_self"}
                             key={subIndex}
                             href={subItem.to}
                             className="block px-4 py-2 rounded-md text-white hover:bg-white hover:bg-opacity-20 transition-all duration-200"

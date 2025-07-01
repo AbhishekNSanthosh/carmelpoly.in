@@ -30,6 +30,22 @@ export default function Footer() {
                     About Us
                   </Link>
                 </li>
+                 <li>
+                  <Link
+                    href="/profile"
+                    className="hover:underline hover:text-white transition"
+                  >
+                    Profile
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/governing-body"
+                    className="hover:underline hover:text-white transition"
+                  >
+                    Governing Body
+                  </Link>
+                </li>
                 <li>
                   <Link
                     href="/grievance-cell"
@@ -62,6 +78,10 @@ export default function Footer() {
                     Internal Complaints Committee (ICC)
                   </Link>
                 </li>
+              </ul>
+            </div>
+            <div className="w-full sm:w-auto">
+              <ul className="space-y-2 text-sm text-white/90">
                 <li>
                   <Link
                     href="/sc-st"
@@ -70,10 +90,14 @@ export default function Footer() {
                     SC/ST Monitoring Committee
                   </Link>
                 </li>
-              </ul>
-            </div>
-            <div className="w-full sm:w-auto">
-              <ul className="space-y-2 text-sm text-white/90">
+                <li>
+                  <Link
+                    href="/students-council"
+                    className="hover:underline hover:text-white transition"
+                  >
+                    Student's Council
+                  </Link>
+                </li>
                 <li>
                   <Link
                     href="/mandatory-disclosure"

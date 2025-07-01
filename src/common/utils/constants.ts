@@ -123,7 +123,8 @@ export const navItems = [
             },
             {
                 title: "Make Fee Payment",
-                to: "/",
+                to: "https://paydirect.eduqfix.com/app/pDLKjv890e9C7JJO7lFy48t46jszRZdQNjam0ONL899cRUw51zOGe+TM23UqdJdi/6530",
+                ext:true
             },
         ]
     },
@@ -342,3 +343,41 @@ export const departments = {
     ]
   }
 };
+
+
+export const managementTeam=[   {
+      id: 1,
+      name: "Fr Thomas Choolaparampil CMI",
+      position: "Chairman",
+      image: "/management/Choolaparampil.png",
+      contact: "0477-2287240"
+    },
+    {
+      id: 2,
+      name: "Fr James Devasia CMI",
+      position: "Principal",
+      image: "/management/James Kanyakonil.png",
+      contact: "0477-2287241"
+    },
+    {
+      id: 3,
+      name: "Fr Jacob Kurian CMI",
+      position: "Vice-Principal & Self-Financing Section Co-ordinator",
+      image: "/management/Purakkary Jacob.png",
+      contact: "0477-2287242"
+    },
+    {
+      id: 4,
+      name: "Fr Bijo M.D. CMI",
+      position: "Bursar",
+      image: "/management/Bijo Mattaparambil.jpg",
+      contact: "0477-2287243"
+    },
+    {
+      id: 5,
+      name: "Fr Thomas G. CMI",
+      position: "Hostel Warden",
+      image: "/management/Pockavarayathu.png",
+      contact: "0477-2287244"
+    }
+  ];

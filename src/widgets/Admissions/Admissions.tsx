@@ -42,7 +42,7 @@ export default function Admissions() {
             target="_blank"
             className="inline-block"
           >
-            <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg text-lg font-semibold shadow-md transition duration-300">
+            <button className="bg-primary hover:bg-primary text-white px-6 py-3 rounded-lg text-lg font-semibold shadow-md transition duration-300">
               Apply Now
             </button>
           </Link>
