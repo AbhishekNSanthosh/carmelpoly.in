@@ -28,8 +28,8 @@ export default function TopBar() {
         </div> */}
         <div className="flex flex-row items-center gap-2">
           <MdEmail className="text-lg" />
-          <Link href="mailto:info@carmelpoly.in" className="hover:underline">
-            info@carmelpoly.in
+          <Link href="mailto:carmelpolytechic@gmail.com" className="hover:underline">
+           carmelpolytechic@gmail.com
           </Link>
         </div>
       </div>

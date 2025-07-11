@@ -196,16 +196,16 @@ export default function Footer() {
             <p>
               <span className="font-medium">Email:</span>{" "}
               <a
-                href="mailto:info@carmelpoly.in"
+                href="mailto:carmelpolytechic@gmail.com"
                 className="underline hover:text-blue-100 transition"
               >
-                info@carmelpoly.in
+                carmelpolytechic@gmail.com
               </a>
             </p>
           </div>
 
           {/* Social Icons */}
-          <div className="flex gap-4 mt-6 lg:justify-start">
+          <div className="flex gap-4 mt-6 lg:justify-start items-center justify-center">
             <Link
               href="#"
               className="bg-white text-primary p-2 rounded-md hover:scale-105 transition"
@@ -248,15 +248,15 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="w-full bg-white/60 h-[0.7px] my-8"></div>
       <div className="flex flex-col md:flex-row items-center justify-between text-sm text-white gap-4 md:gap-0">
-        <div className="flex flex-row items-center gap-5">
+        <div className="flex flex-col md:flex-row items-center gap-5">
           <Link
-            href="/about"
+            href="/"
             className="hover:underline hover:text-white transition"
           >
             Privacy Policy
           </Link>
           <Link
-            href="/about"
+            href="/"
             className="hover:underline hover:text-white transition"
           >
             Terms & Conditions

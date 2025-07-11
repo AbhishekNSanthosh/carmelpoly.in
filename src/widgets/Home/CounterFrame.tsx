@@ -4,7 +4,7 @@ import { FaBook, FaGraduationCap, FaUsers } from "react-icons/fa";
 
 export default function CounterFrame() {
   const items = [
-    { icon: <FaBook size={40} />, end: 5, label: "DEPARTMENTS" },
+    { icon: <FaBook size={40} />, end: 6, label: "DEPARTMENTS" },
     { icon: <FaGraduationCap size={40} />, end: 1000, label: "ALUMNI" },
     { icon: <FaUsers size={40} />, end: 100, label: "STAFFS" },
     { icon: <FaGraduationCap size={40} />, end: 1000, label: "STUDENTS" },

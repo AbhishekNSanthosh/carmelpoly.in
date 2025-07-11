@@ -8,6 +8,17 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 import { LuChevronRight } from "react-icons/lu";
 import { LuChevronDown } from "react-icons/lu";
 
+ type NavItem = {
+  title: string;
+  to?: string;
+  dropDown?: Array<SubNavItem>;
+};
+ type SubNavItem = {
+  title: string;
+  to: string;
+  ext?: boolean; // true if it should open in a new tab
+};
+
 export default function Header() {
   const [activeDropdown, setActiveDropdown] = useState<number | null>(null);
   const dropdownRefs = useRef<Array<HTMLDivElement | null>>([]);
@@ -231,7 +242,7 @@ export default function Header() {
                 <li key={index}>
                   <Link
                     className={`flex text-gray-700 text-md items-center gap-2 py-3 px-4 flex-row justify-between rounded-md hover:bg-gray-100 w-full`}
-                    href={navItem?.to}
+                    href={navItem?.to ?? "#"}
                     onClick={(e) => {
                       if (navItem.dropDown) {
                         e.preventDefault(); // prevent navigation if dropdown

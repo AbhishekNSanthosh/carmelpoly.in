@@ -1,137 +1,161 @@
-export const navItems = [
-    {
-        title: "Home",
+type NavItem = {
+  title: string;
+  to?: string;
+  dropDown?: Array<SubNavItem>;
+};
+
+type SubNavItem = {
+  title: string;
+  to: string;
+  ext?: boolean; // true if it should open in a new tab
+};
+
+export const navItems: NavItem[] = [
+  {
+    title: "Home",
+    to: "/",
+  },
+  {
+    title: "About Us",
+    to: "/",
+    dropDown: [
+      {
+        title: "Our Profile",
+        to: "/about/about-us",
+      },
+      {
+        title: "Our Inspiration",
+        to: "/about/our-inspiration",
+      },
+      {
+        title: "History",
+        to: "/about/history",
+      },
+      {
+        title: "Vision & Mission",
+        to: "/about/vision-mission",
+      },
+      {
+        title: "Management",
+        to: "/about/management",
+      },
+    ]
+  },
+  {
+    title: "Admissions",
+    to: "/admissions",
+    // dropDown: [
+    //     {
+    //         title: "History",
+    //         to: "/",
+    //     },
+    //     {
+    //         title: "Mission & Vision",
+    //         to: "/",
+    //     },
+    //     {
+    //         title: "Management",
+    //         to: "/",
+    //     },
+    // ]
+  },
+  {
+    title: "Departments",
+    to: "/",
+    dropDown: [
+      {
+        title: "Civil Engineering",
+        to: "/departments/ce",
+      },
+      {
+        title: "Mechanical Engineering",
+        to: "/departments/me",
+      },
+      {
+        title: "Electrical & Electronics Engineering",
+        to: "/departments/eee",
+      },
+      {
+        title: "Automobile Engineering",
+        to: "/departments/ae",
+      },
+      {
+        title: "Computer Engineering",
+        to: "/departments/cse",
+      },
+      {
+        title: "Electronics Engineering",
+        to: "/departments/ee",
+      },
+      {
+        title: "General Engineering",
+        to: "/departments/general-engineering",
+      },
+      {
+        title: "Workshop",
+        to: "/departments/workshop",
+      },
+      {
+        title: "Administrative Staff",
+        to: "/departments/administrative-staff",
+      },
+    ]
+  },
+  {
+    title: "Campus",
+    to: "/",
+    dropDown: [
+      {
+        title: "Facilities",
         to: "/",
-    },
-    {
-        title: "About Us",
-        to: "/",
-        dropDown: [
-            {
-                title: "Our Profile",
-                to: "/about/about-us",
-            },
-            {
-                title: "Our Inspiration",
-                to: "/about/our-inspiration",
-            },
-            {
-                title: "History",
-                to: "/about/history",
-            },
-            {
-                title: "Vision & Mission",
-                to: "/about/vision-mission",
-            },
-            {
-                title: "Management",
-                to: "/about/management",
-            },
-        ]
-    },
-    {
-        title: "Admissions",
-        to: "/admissions",
-        // dropDown: [
-        //     {
-        //         title: "History",
-        //         to: "/",
-        //     },
-        //     {
-        //         title: "Mission & Vision",
-        //         to: "/",
-        //     },
-        //     {
-        //         title: "Management",
-        //         to: "/",
-        //     },
-        // ]
-    },
-    {
-        title: "Departments",
-        to: "/",
-        dropDown: [
-            {
-                title: "Computer Engineering",
-                to: "/departments/cse",
-            },
-            {
-                title: "Mechanical Engineering",
-                to: "/departments/me",
-            },
-            {
-                title: "Civil Engineering",
-                to: "/departments/ce",
-            },
-            {
-                title: "Electrical & Electronics Engineering",
-                to: "/departments/eee",
-            },
-            {
-                title: "Automobile Engineering",
-                to: "/departments/ae",
-            },
-            {
-                title: "Electronics Engineering",
-                to: "/departments/ee",
-            },
-        ]
-    },
-    {
-        title: "Campus",
-        to: "/",
-        dropDown: [
-            {
-                title: "Facilities",
-                to: "/",
-            },
-            {
-                title: "Library",
-                to: "/",
-            },
-            {
-                title: "Hostel",
-                to: "/",
-            },
-        ]
-    },
-    {
+      },
+      {
         title: "Library",
         to: "/",
-        dropDown: [
-            {
-                title: "E-Library",
-                to: "/",
-            },
-            {
-                title: "Resources",
-                to: "/",
-            },
-        ]
-    },
-    {
-        title: "Fee",
+      },
+      {
+        title: "Hostel",
         to: "/",
-        dropDown: [
-            {
-                title: "Fee Structure",
-                to: "/",
-            },
-            {
-                title: "Scholarships",
-                to: "/",
-            },
-            {
-                title: "Make Fee Payment",
-                to: "https://paydirect.eduqfix.com/app/pDLKjv890e9C7JJO7lFy48t46jszRZdQNjam0ONL899cRUw51zOGe+TM23UqdJdi/6530",
-                ext:true
-            },
-        ]
-    },
-    {
-        title: "Contact",
-        to: "/contact",
-    },
+      },
+    ]
+  },
+  {
+    title: "Library",
+    to: "/",
+    dropDown: [
+      {
+        title: "E-Library",
+        to: "/",
+      },
+      {
+        title: "Resources",
+        to: "/",
+      },
+    ]
+  },
+  {
+    title: "Fee",
+    to: "/",
+    dropDown: [
+      // {
+      //   title: "Fee Structure",
+      //   to: "/",
+      // },
+      // {
+      //   title: "Scholarships",
+      //   to: "/",
+      // },
+      {
+        title: "Make Fee Payment",
+        to: "https://paydirect.eduqfix.com/app/pDLKjv890e9C7JJO7lFy48t46jszRZdQNjam0ONL899cRUw51zOGe+TM23UqdJdi/6530",
+        ext: true
+      },
+    ]
+  },
+  {
+    title: "Contact",
+    to: "/contact",
+  },
 ]
 
 export const departments = {
@@ -341,43 +365,124 @@ export const departments = {
       "Mrs. Kiran M. Thomas - Demonstrator",
       "Mr. A. Yoonus - Trade Instructor"
     ]
-  }
+  },
+  // ge: {
+  //   "AidedSection": {
+  //     "title": "Aided Section",
+  //     "faculty": [
+  //       "Mrs. Sita S. (Computer)",
+  //       "Mrs. Molimma Joseph (Physics)",
+  //       "Mrs. Rakhi V.R. (Chemistry)",
+  //       "Fr Libin Xavier CMI (Mathematics)",
+  //       "Fr Thomas G. CMI (English)",
+  //       "Mr. Jaick Joseph (Physical Instructor)",
+  //       "Mr. Wilfred E. (Lab Attender)"
+  //     ]
+  //   },
+  //   "SelfFinancingSection": {
+  //     "title": "Self-Financing Section",
+  //     "faculty": [
+  //       "Mrs. Ans Mathew (Physics)",
+  //       "Mrs. Bindu K.S. (Chemistry)",
+  //       "Mrs. Resmi R. Nath (English)",
+  //       "Mrs. Anisha G. (Mathematics)"
+  //     ]
+  //   }
+  // },
+  // workshop: {
+  //   "title": "Workshop",
+  //   "faculty": [
+  //     "Fr Jaison Joseph CMI (Workshop Superintendent)",
+  //     "Mr. Naijin Varghese (Workshop Instructor)",
+  //     "Mr. Varghese Joseph (Workshop Instructor)",
+  //     "Mr. Jenson (Workshop Instructor)",
+  //     "Mr. Bibin K.W. (Trade Instructor)",
+  //     "Mr. Alex C. Mullassery (Trade Instructor)",
+  //     "Fr Jaison Antony CMI (Trade Instructor)",
+  //     "Mr. Aji Kumar M.S. (Trade Instructor)",
+  //     "Mr. Sen Babu (Trade Instructor)",
+  //     "Mr. Arun N. (Trade Instructor)",
+  //     "Mr. Anish Varghese (Tradesman)",
+  //     "Mr. Tijomon Thomas (Tradesman)",
+  //     "Mr. Thomas Joseph (Tradesman)",
+  //     "Mr. Vishnu K.V. (Tradesman)"
+  //   ]
+  // },
+  // AdministrativeStaff: {
+  //   "AidedSection": {
+  //     "title": "Aided Section",
+  //     "staff": [
+  //       "Fr James Devasia CMI (Principal)",
+  //       "Mr. Binny Joseph (Office Superintendent)",
+  //       "Mr. Syam Mohan (Senior Clerk)",
+  //       "Mr. Antony J. (Senior Clerk)",
+  //       "Mr. Joshy Antony (Senior Clerk)",
+  //       "Mr. Tom Thomas (Clerk)",
+  //       "Mr. Mathew A.J. (Clerk)",
+  //       "Mr. Bibin Thomas (Clerk)",
+  //       "Mrs. Radhika M. (Steno Typist)",
+  //       "Mr. Shijo Cherian (Librarian)",
+  //       "Mr. Vijayaraj M. (Library Attender)",
+  //       "Mr. Joshy Josekutty (Store Keeper)",
+  //       "Mr. Vishnu Kumar V.L. (Office Attendant)",
+  //       "Mrs. Elizabeth P.A. (Office Attendant)",
+  //       "Mr. Ajay T.A. (Office Attendant)",
+  //       "Mr. Suresh Kumar G. (Office Attendant)",
+  //       "Mr. Benadict P.J. (Office Attendant)",
+  //       "Mr. Akhil P.M. (Office Attendant)",
+  //       "Mr. Vinu George (Sweeper)",
+  //       "Mr. Mathew Devasia (Sweeper)",
+  //       "Mr. Basanta Raj Sharma (Watchman)",
+  //       "Mr. Krishna Prasad Adhikari (Watchman)"
+  //     ]
+  //   },
+  //   "SelfFinancingSection": {
+  //     "title": "Self-Financing Section",
+  //     "staff": [
+  //       "Mrs. Fasila S. (Clerk)",
+  //       "Mr. Martin Joseph (Clerk)",
+  //       "Mrs. Helan V.C. (Sweeper)",
+  //       "Mr. Ramesan K. (PRO)"
+  //     ]
+  //   }
+  // }
+
 };
 
 
-export const managementTeam=[   {
-      id: 1,
-      name: "Fr Thomas Choolaparampil CMI",
-      position: "Chairman",
-      image: "/management/Choolaparampil.png",
-      contact: "0477-2287240"
-    },
-    {
-      id: 2,
-      name: "Fr James Devasia CMI",
-      position: "Principal",
-      image: "/management/James Kanyakonil.png",
-      contact: "0477-2287241"
-    },
-    {
-      id: 3,
-      name: "Fr Jacob Kurian CMI",
-      position: "Vice-Principal & Self-Financing Section Co-ordinator",
-      image: "/management/Purakkary Jacob.png",
-      contact: "0477-2287242"
-    },
-    {
-      id: 4,
-      name: "Fr Bijo M.D. CMI",
-      position: "Bursar",
-      image: "/management/Bijo Mattaparambil.jpg",
-      contact: "0477-2287243"
-    },
-    {
-      id: 5,
-      name: "Fr Thomas G. CMI",
-      position: "Hostel Warden",
-      image: "/management/Pockavarayathu.png",
-      contact: "0477-2287244"
-    }
-  ];
+export const managementTeam = [{
+  id: 1,
+  name: "Fr Thomas Choolaparampil CMI",
+  position: "Chairman",
+  image: "/management/Choolaparampil.png",
+  contact: "0477-2287240"
+},
+{
+  id: 2,
+  name: "Fr James Devasia CMI",
+  position: "Principal",
+  image: "/management/James Kanyakonil.png",
+  contact: "0477-2287241"
+},
+{
+  id: 3,
+  name: "Fr Jacob Kurian CMI",
+  position: "Vice-Principal & Self-Financing Section Co-ordinator",
+  image: "/management/Purakkary Jacob.png",
+  contact: "0477-2287242"
+},
+{
+  id: 4,
+  name: "Fr Bijo M.D. CMI",
+  position: "Bursar",
+  image: "/management/Bijo Mattaparambil.jpg",
+  contact: "0477-2287243"
+},
+{
+  id: 5,
+  name: "Fr Thomas G. CMI",
+  position: "Hostel Warden",
+  image: "/management/Pockavarayathu.png",
+  contact: "0477-2287244"
+}
+];

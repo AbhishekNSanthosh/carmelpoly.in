@@ -14,7 +14,7 @@ export default function Philosophy() {
       {/* <div className="absolute inset-0 bg-primary bg-opacity-70 z-10"></div> */}
 
       {/* Content */}
-      <div className="relative z-20 px-[5vw] py-[2rem] flex flex-col space-y-8">
+      <div className="relative z-20 px-[5vw] py-[1rem] flex flex-col space-y-8 mt-[-30px]">
         {/* Section Header */}
         <Titlebar title="Our Philosophy" />
 
