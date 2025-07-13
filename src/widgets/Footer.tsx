@@ -201,6 +201,13 @@ export default function Footer() {
               >
                 carmelpolytechic@gmail.com
               </a>
+              <br />
+              <a
+                href="mailto:info@carmelpoly.in"
+                className="underline hover:text-blue-100 transition"
+              >
+                info@carmelpoly.in
+              </a>
             </p>
           </div>
 

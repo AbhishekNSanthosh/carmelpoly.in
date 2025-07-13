@@ -4,11 +4,12 @@ import "@styles/scss/main.scss";
 import TopBar from "@widgets/TopBar";
 import Header from "@widgets/Header";
 import Footer from "@widgets/Footer";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "Carmel Polytechnic College | Premier Technical Education Since 1958",
-  description: "Established in 1958 by Very Rev. Fr. Gilbert Palakunnel CMI, Carmel Polytechnic College offers quality technical education managed by CMI Fathers in Punnapra, Alappuzha.",
+  description:
+    "Established in 1958 by Very Rev. Fr. Gilbert Palakunnel CMI, Carmel Polytechnic College offers quality technical education managed by CMI Fathers in Punnapra, Alappuzha.",
   keywords: [
     "Carmel Polytechnic College",
     "Technical education Kerala",
@@ -27,8 +28,10 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Carmel Polytechnic College | Premier Technical Education Since 1958",
-    description: "Established in 1958 by Very Rev. Fr. Gilbert Palakunnel CMI, offering quality technical education in Punnapra, Alappuzha.",
+    title:
+      "Carmel Polytechnic College | Premier Technical Education Since 1958",
+    description:
+      "Established in 1958 by Very Rev. Fr. Gilbert Palakunnel CMI, offering quality technical education in Punnapra, Alappuzha.",
     url: "https://www.carmelpolytechnic.ac.in",
     siteName: "Carmel Polytechnic College",
     images: [
@@ -44,22 +47,24 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Carmel Polytechnic College | Premier Technical Education Since 1958",
-    description: "Established in 1958 by Very Rev. Fr. Gilbert Palakunnel CMI, offering quality technical education in Punnapra, Alappuzha.",
+    title:
+      "Carmel Polytechnic College | Premier Technical Education Since 1958",
+    description:
+      "Established in 1958 by Very Rev. Fr. Gilbert Palakunnel CMI, offering quality technical education in Punnapra, Alappuzha.",
     images: ["/images/twitter-image.jpg"],
     site: "@carmelpoly",
     creator: "@carmelpoly",
   },
   icons: {
     icon: "/favicon.ico",
-    shortcut: "/favicon.png",
+    shortcut: "/poly.png",
     apple: "/apple-touch-icon.png",
     other: [
       {
         rel: "icon",
         type: "image/png",
         sizes: "32x32",
-        url: "/favicon.png",
+        url: "/poly.png",
       },
     ],
   },
@@ -90,52 +95,60 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <Analytics />
         {/* Preconnect to external domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+
         {/* Preload critical resources */}
-        <link rel="preload" href="/fonts/custom-font.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-        
+        <link
+          rel="preload"
+          href="/fonts/custom-font.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+
         {/* Structured data */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "EducationalOrganization",
-            "name": "Carmel Polytechnic College",
-            "url": "https://www.carmelpolytechnic.ac.in",
-            "logo": "https://www.carmelpolytechnic.ac.in/images/logo.png",
-            "foundingDate": "1958",
-            "founder": {
+            name: "Carmel Polytechnic College",
+            url: "https://www.carmelpolytechnic.ac.in",
+            logo: "https://www.carmelpolytechnic.ac.in/images/logo.png",
+            foundingDate: "1958",
+            founder: {
               "@type": "Person",
-              "name": "Very Rev. Fr. Gilbert Palakunnel CMI"
+              name: "Very Rev. Fr. Gilbert Palakunnel CMI",
             },
-            "address": {
+            address: {
               "@type": "PostalAddress",
-              "streetAddress": "Punnapra",
-              "addressLocality": "Alappuzha",
-              "addressRegion": "Kerala",
-              "postalCode": "688004",
-              "addressCountry": "IN"
+              streetAddress: "Punnapra",
+              addressLocality: "Alappuzha",
+              addressRegion: "Kerala",
+              postalCode: "688004",
+              addressCountry: "IN",
             },
-            "contactPoint": {
+            contactPoint: {
               "@type": "ContactPoint",
-              "contactType": "Admissions",
-              "telephone": "+91-XXX-XXXXXXX",
-              "email": "admissions@carmelpolytechnic.ac.in"
-            }
+              contactType: "Admissions",
+              telephone: "+91-XXX-XXXXXXX",
+              email: "admissions@carmelpolytechnic.ac.in",
+            },
           })}
         </script>
       </head>
       <body className="text-gray-700">
         <TopBar />
         <Header />
-        <main id="main-content">
-          {children}
-        </main>
+        <main id="main-content">{children}</main>
         <Footer />
       </body>
-      <Analytics/>
     </html>
   );
 }

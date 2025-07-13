@@ -40,7 +40,7 @@ export default function ContactDetails() {
           </div>
           <div className=" flex flex-col">
             <span className="font-semibold text-xl">Email</span>
-            <span className="">carmelpolytechic@gmail.com</span>
+            <span className="">carmelpolytechic@gmail.com, info@carmelpoly.in</span>
           </div>
         </div>
       </div>
