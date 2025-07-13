@@ -4,6 +4,7 @@ import "@styles/scss/main.scss";
 import TopBar from "@widgets/TopBar";
 import Header from "@widgets/Header";
 import Footer from "@widgets/Footer";
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata: Metadata = {
   title: "Carmel Polytechnic College | Premier Technical Education Since 1958",
@@ -134,6 +135,7 @@ export default function RootLayout({
         </main>
         <Footer />
       </body>
+      <Analytics/>
     </html>
   );
 }
