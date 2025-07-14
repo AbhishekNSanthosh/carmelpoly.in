@@ -30,7 +30,7 @@ export default function Footer() {
                     About Us
                   </Link>
                 </li>
-                 <li>
+                <li>
                   <Link
                     href="/profile"
                     className="hover:underline hover:text-white transition"
@@ -214,7 +214,8 @@ export default function Footer() {
           {/* Social Icons */}
           <div className="flex gap-4 mt-6 lg:justify-start items-center justify-center">
             <Link
-              href="#"
+              target="_blank"
+              href="https://www.facebook.com/carmel.poly.188"
               className="bg-white text-primary p-2 rounded-md hover:scale-105 transition"
               aria-label="Facebook"
             >
@@ -228,21 +229,24 @@ export default function Footer() {
               <FaTwitter size={16} />
             </Link>
             <Link
-              href="#"
+              href="https://www.instagram.com/carmel_polytechnic_official/"
+              target="_blank"
               className="bg-white text-primary p-2 rounded-md hover:scale-105 transition"
               aria-label="Instagram"
             >
               <FaInstagram size={16} />
             </Link>
             <Link
-              href="#"
+            target="_blank"
+              href="https://www.linkedin.com/company/carmelpoly"
               className="bg-white text-primary p-2 rounded-md hover:scale-105 transition"
               aria-label="LinkedIn"
             >
               <FaLinkedinIn size={16} />
             </Link>
             <Link
-              href="#"
+              target="_blank"
+              href="https://www.youtube.com/@carmelpolytechniccollege392"
               className="bg-white text-primary p-2 rounded-md hover:scale-105 transition"
               aria-label="YouTube"
             >
