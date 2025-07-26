@@ -137,7 +137,7 @@ export const navItems: NavItem[] = [
         ext: true
       },
       {
-        title: "LMS"
+        title: "LMS",
         to: "https://moodle.carmelpoly.in",
         ext: true
       },
