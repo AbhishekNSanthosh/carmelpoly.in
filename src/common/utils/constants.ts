@@ -131,6 +131,16 @@ export const navItems: NavItem[] = [
         title: "Resources",
         to: "/",
       },
+      {
+        title: "NBA DATA",
+        to: "https://nba.carmelpoly.in",
+        ext: true
+      },
+      {
+        title: "LMS"
+        to: "https://moodle.carmelpoly.in",
+        ext: true
+      },
     ]
   },
   {
